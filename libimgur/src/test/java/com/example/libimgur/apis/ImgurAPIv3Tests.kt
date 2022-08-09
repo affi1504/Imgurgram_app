@@ -1,13 +1,11 @@
 package com.example.libimgur.apis
 
 import com.example.libimgur.ImgurClient
-import com.example.libimgur.params.section
-import junit.framework.Assert.assertNotNull
+import com.example.libimgur.params.Section
+import junit.framework.TestCase.assertNotNull
 import kotlinx.coroutines.runBlocking
-import okhttp3.OkHttpClient
 import org.junit.Test
-import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
+
 
 class ImgurAPIv3Tests {
 
@@ -21,13 +19,19 @@ class ImgurAPIv3Tests {
 
     @Test
     fun `get galleries - hot working`() = runBlocking{
-        val response = api.getGallery(section.HOT)
+        val response = api.getGallery(Section.HOT)
         assertNotNull(response)
     }
 
     @Test
     fun `get galleries - top working`() = runBlocking{
-        val response = api.getGallery(section.TOP)
+        val response = api.getGallery(Section.TOP)
         assertNotNull(response)
+    }
+
+    @Test
+    fun `get tags - cat working`() = runBlocking {
+        val response = api.getTagGallery("cat")
+        assertNotNull(response.body())
     }
 }

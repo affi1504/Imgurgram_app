@@ -34,5 +34,7 @@ data class Tag(
     @Json(name = "thumbnail_is_animated")
     val thumbnailIsAnimated: Boolean,
     @Json(name = "total_items")
-    val totalItems: Int
+    val totalItems: Int,
+    @Json(name = "items")
+    val items: List<Image>?
 )

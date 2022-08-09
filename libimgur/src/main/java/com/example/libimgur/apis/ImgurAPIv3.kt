@@ -1,6 +1,7 @@
 package com.example.libimgur.apis
 
 import com.example.libimgur.models.GalleryResponse
+import com.example.libimgur.models.TagResponse
 import com.example.libimgur.models.TagsResponse
 import com.example.libimgur.params.Section
 
@@ -19,5 +20,10 @@ interface ImgurAPIv3 {
 
     @GET("tags")
     suspend fun getTags() : Response<TagsResponse>
+
+    @GET("gallery/t/{tag}")
+    suspend fun getTagGallery(
+        @Path("tag") tag: String,
+    ): Response<TagResponse>
 
 }

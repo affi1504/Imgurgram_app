@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import coil.Coil
+import coil.request.ImageRequest
 import com.example.imgurgram.databinding.FragmentFeedBinding
 
 class FeedFragment : Fragment() {
@@ -38,7 +40,14 @@ class FeedFragment : Fragment() {
         _binding = FragmentFeedBinding.inflate(inflater, container, false)
         binding.FeedRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.FeedRecyclerView.adapter = feedAdapter
-        viewModel.feed.observe({ lifecycle }){
+        viewModel.feed.observe(viewLifecycleOwner){
+            it.forEach{ image ->
+            val request = ImageRequest.Builder(requireContext())
+                .data("https://i.imgur.com/${image.cover}.jpg")
+                .size(binding.FeedRecyclerView.width)
+                .build()
+                Coil.imageLoader(requireContext()).enqueue(request)
+            }
             feedAdapter.submitList(it)
         }
 

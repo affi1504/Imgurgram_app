@@ -7,11 +7,14 @@
         <entry key="..\:/affi/AndroidProjects/imgurgram/app/src/main/res/drawable/ic_thumbs_up.xml" value="0.1675" />
         <entry key="..\:/affi/AndroidProjects/imgurgram/app/src/main/res/drawable/ic_views.xml" value="0.1675" />
         <entry key="..\:/affi/AndroidProjects/imgurgram/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/affi/AndroidProjects/imgurgram/app/src/main/res/layout/activity_story.xml" value="0.12360688956433637" />
         <entry key="..\:/affi/AndroidProjects/imgurgram/app/src/main/res/layout/fragment_dashboard.xml" value="0.25416666666666665" />
         <entry key="..\:/affi/AndroidProjects/imgurgram/app/src/main/res/layout/fragment_feed.xml" value="0.17255434782608695" />
         <entry key="..\:/affi/AndroidProjects/imgurgram/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/affi/AndroidProjects/imgurgram/app/src/main/res/layout/fragment_notifications.xml" value="0.25416666666666665" />
         <entry key="..\:/affi/AndroidProjects/imgurgram/app/src/main/res/layout/list_item_gallery_image.xml" value="0.22826086956521738" />
+        <entry key="..\:/affi/AndroidProjects/imgurgram/app/src/main/res/layout/list_item_story_head.xml" value="0.21467391304347827" />
+        <entry key="..\:/affi/AndroidProjects/imgurgram/app/src/main/res/layout/page_item_story.xml" value="0.21467391304347827" />
         <entry key="..\:/affi/AndroidProjects/imgurgram/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
